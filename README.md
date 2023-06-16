@@ -81,20 +81,23 @@ A repository with a simple implementation of a test task.
 - Webserwer -> nginx
 - Database -> mysql
 
-* Щоб вимкнути всі контейнери (спершу потрібно відкрити директорію з проектом):
-- docker-compose down 
-* або якщо на сервері:
-- docker-compose -f docker-compose-server.yml down
+**Щоб вимкнути всі контейнери (спершу потрібно відкрити директорію з проектом):**
+``` docker-compose down ```
 
-* Щоб глянути статус всіх контейнерів:
-- docker ps -a
+**або якщо на сервері:**
+``` docker-compose -f docker-compose-server.yml down ```
 
-* Щоб переглянути логи контейнеру:
-- docker logs [container_name]
 
-* Щоб відкрити вміст контейнера або виконати команду всередині:
-- docker exec -it [container_name] /bin/sh
-- docker exec [container_name] [command]
+**Щоб глянути статус всіх контейнерів:**
+``` docker ps -a ```
+
+**Щоб переглянути логи контейнеру:**
+``` docker logs [container_name] ```
+
+**Щоб відкрити вміст контейнера або виконати команду всередині:**
+``` docker exec -it [container_name] /bin/sh ```
+
+``` docker exec [container_name] [command] ```
 
 ### Офтоп (коментарі і нереалізовані ідеї):
 В моїй реалізації frontend - максимально фейковий (в принципі як і весь проект, макет не більше). Наступними пунктами була б реалізація SSL(TLS) сертифікатів та зберігання чутливих даних в .env файлі. Крім того налаштування пайпланів для автоматичного розгортання в процесі розробки. 
