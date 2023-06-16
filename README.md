@@ -4,7 +4,7 @@ A repository with a simple implementation of a test task.
 ## Вимоги:
 - git (потрібен для клонування проекту)
 - docker та docker-compose
-(проект може бути розгорнутий в любому середовищі яке підтримує використання docker)
+> Вимог по операційній системі немає, окрім того що вона має підтримувати використання docker
 
 ## Структура проекту:
 - Frontend (Vue.js [x.x])
@@ -13,7 +13,7 @@ A repository with a simple implementation of a test task.
 - Webserver (Nginx [1.21])
 
 ## Файлова структура:
-.
+``` bash
 ├── README.md
 ├── backend
 │   ├── Dockerfile
@@ -30,6 +30,7 @@ A repository with a simple implementation of a test task.
     ├── certs
     └── conf
         └── nginx.conf
+```
 
 ## Загальний опис:
 Наш проект складається з фронтенду та бекенду. Бекенд на PHP виступає в ролі API, на основі якого фронтенд (Vue.js) генерує статичний контент. Для роботи використовується база данних MySQL (яка хоститься на цій же машині). Фронтенд та бекенд обслуговує Nginx - видає статику фронтенду по домену "app.loc", та як проксі на бекенд для "api.app.loc". Весь проект докеризований, та запускається однією командою docker-compose.
